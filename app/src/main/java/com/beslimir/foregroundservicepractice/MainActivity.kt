@@ -42,6 +42,7 @@ class MainActivity : ComponentActivity() {
                         Intent(applicationContext, LocationService::class.java).apply {
                             action = LocationService.ACTION_START
                             startService(this)
+                            //TODO: Check for startForegroundService() if API >= 26, otherwise startService()
                         }
                     }) {
                         Text(text = "Start")
